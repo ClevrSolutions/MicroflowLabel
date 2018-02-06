@@ -46,7 +46,7 @@
 			},
 
 			_setLabelContents: function (value) {
-				var contents = value;
+				var contents = value || "";
 				if (!this.ashtml) {
 					contents = dom.escapeString(contents);
 				}
