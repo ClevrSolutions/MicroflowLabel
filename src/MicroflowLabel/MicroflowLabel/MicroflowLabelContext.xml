@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<widget id="MicroflowLabel.widget.MicroflowLabelContext" needsEntityContext="true" xmlns="http://www.mendix.com/widget/1.0/">
+    <name>Microflow Label Context</name>
+    <description>Widget to show a string returned from a microflow.</description>
+
+    <icon></icon>
+
+    <properties>
+        <property key="mf" type="microflow" required="true">
+            <caption>Source Microflow</caption>
+            <category>General</category>
+            <description>Microflow which is executed to obtain the value of this label</description>
+            <returnType type="String" />
+        </property>
+        <property key="onclickmf" type="microflow" required="false" defaultValue="">
+            <caption>Click Microflow</caption>
+            <category>General</category>
+            <description>The microflow to execute on click.</description>
+            <returnType type="Void"/>
+        </property>
+		<property key="modalProgress" type="boolean" defaultValue="false">
+			<caption>Blocking progress</caption>
+			<category>General</category>
+			<description>Show progress as blocking modal dialog</description>   
+		</property>
+		<property key="progressMsg" type="translatableString" multiline="false" required="false">
+			<caption>Progress message</caption>
+			<category>General</category>
+			<description>The text will be shown in the progress window</description>
+		</property>
+        <property key="ashtml" type="boolean" defaultValue="false">
+            <caption>Render as HTML</caption>
+            <category>General</category>
+            <description>Render the value literally as HTML
+            </description>
+        </property>
+    </properties>
+</widget>
+
